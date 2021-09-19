@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="99dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Insert movie_title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="Insert movie_director"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Insert movie_duration"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="Insert movie_category"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="211dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Insert movie_year"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inMovbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+    <Button
+        android:id="@+id/inMovbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="addMve"
+        android:text="Insert Movie"
+        app:layout_constraintBottom_toTopOf="@+id/updatebutton"
+        app:layout_constraintEnd_toStartOf="@+id/vmovbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+    <Button
+        android:id="@+id/updatebutton"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="uptMovie"
+        android:text="Update"
+        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inMovbutton" />
+
+    <Button
+        android:id="@+id/vmovbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="viewallMovies"
+        android:text="View All Movies"
+        app:layout_constraintBottom_toTopOf="@+id/updatebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inMovbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="238dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Insert Name of Movie for Del"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/searchmovbutton"
+        app:layout_constraintEnd_toStartOf="@+id/delmovbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatebutton" />
+
+    <Button
+        android:id="@+id/delmovbutton"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="23dp"
+        android:onClick="delMovie"
+        android:text="Delete Movie"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/vmovbutton" />
+
+    <Button
+        android:id="@+id/searchmovbutton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="127dp"
+        android:onClick="fByDirector"
+        android:text="Dire Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editText7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="235dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="143dp"
+        android:ems="10"
+        android:hint="Search Movie By Director"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchmovbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+    <Button
+        android:id="@+id/searchmovtitlebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="315dp"
+        android:layout_marginBottom="70dp"
+        android:onClick="fByTitle"
+        android:text="Title Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchmovbutton" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="237dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="74dp"
+        android:ems="10"
+        android:hint="Search Movie by Title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchmovtitlebutton"
+        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+    <Button
+        android:id="@+id/searchmovtitlepartialbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="319dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="fByparsalTitle"
+        android:text="Title partial Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchmovtitlebutton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="Partial mov Titl search"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchmovtitlepartialbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+</androidx.constraintlayout.widget.ConstraintLayout>
